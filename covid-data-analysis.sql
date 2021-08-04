@@ -165,8 +165,6 @@ SELECT SUM(total_cases) AS all_cases, SUM(total_deaths) AS all_deaths,
 SUM(total_deaths)/SUM(total_cases) * 100 AS total_death_percentage
 FROM covid_death;
 
-SELECT * FROM covid_vaccination;
-
 
 --total populations vs vaccination
 
@@ -205,7 +203,7 @@ AND cd.population IS NOT NULL AND cd.population > cv.total_vaccinations
 GROUP BY cd.location
 ORDER BY VaccinationPerPopulation;
 
-SELECT * FROM covid_death;
+
 
 
 
